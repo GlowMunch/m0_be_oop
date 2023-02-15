@@ -1,79 +1,79 @@
-# # Write a class called Unicorn
-# # it should have a dynamic name attribute
-# # it should have a color attribute, that is silver by default
-# # # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
-class Unicorn
-    def initialize(name)
-        @name = name
-        @color = "Silver"
-        @speak = "hello"
-    end
+# # # Write a class called Unicorn
+# # # it should have a dynamic name attribute
+# # # it should have a color attribute, that is silver by default
+# # # # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
+# class Unicorn
+#     def initialize(name)
+#         @name = name
+#         @color = "Silver"
+#         @speak = "hello"
+#     end
     
-    def say(input)
-        @speak = "*~*#{input}"
-    end
-end
+#     def say(input)
+#         @speak = "*~*#{input}"
+#     end
+# end
 
-Land_Walrus = Unicorn.new("Ben")
-p Land_Walrus
-Land_Walrus.say("hi")
-p Land_Walrus
+# Land_Walrus = Unicorn.new("Ben")
+# p Land_Walrus
+# Land_Walrus.say("hi")
+# p Land_Walrus
 
   
 
 
 
-# #  Write a class called Vampire
-# #  it should have a dynamic name attribute
-# #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
-# #  it should have a thirsty attribute, that is true by default
-# # #  it should have a drink method. When called, the thirsty attribute changes to false
-class Vampire
-    def initialize(name, pet = "bat")
-        @name = name
-        @pet = pet
-        @thirsty = "true"
-    end
+# # #  Write a class called Vampire
+# # #  it should have a dynamic name attribute
+# # #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
+# # #  it should have a thirsty attribute, that is true by default
+# # # #  it should have a drink method. When called, the thirsty attribute changes to false
+# class Vampire
+#     def initialize(name, pet = "bat")
+#         @name = name
+#         @pet = pet
+#         @thirsty = "true"
+#     end
     
-    def drink()
-        @thirsty = "false"
-    end
-end
+#     def drink()
+#         @thirsty = "false"
+#     end
+# end
 
-dracula = Vampire.new("Kyle", "cow")
-p dracula
-dracula.drink
-p dracula
-
-
+# dracula = Vampire.new("Kyle", "cow")
+# p dracula
+# dracula.drink
+# p dracula
 
 
-# #  Write a Dragon class
-# #  it should have a dynamic name attribute (string)
-# #  it should have a dynamic rider attribute (string)
-# #  it should have a dynamic color attribute (string)
-# #  it should have a is_hungry attribute that is true by default
-# #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
 
-class Dragon
-    def initialize(name, rider, color)
-        @name = name
-        @rider = rider
-        @color = color
-        @is_hungry = "true"
-    end
 
-    def eat(i)
-        if i >= 4
-            @is_hungry = "false"
-    end
-end
-end
+# # #  Write a Dragon class
+# # #  it should have a dynamic name attribute (string)
+# # #  it should have a dynamic rider attribute (string)
+# # #  it should have a dynamic color attribute (string)
+# # #  it should have a is_hungry attribute that is true by default
+# # #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
 
-puff = Dragon.new("Puff", "Yarl", "Purple")
-p puff
-puff.eat(2)
-p puff
+# class Dragon
+#     def initialize(name, rider, color)
+#         @name = name
+#         @rider = rider
+#         @color = color
+#         @is_hungry = "true"
+#     end
+
+#     def eat(i)
+#         if i >= 4
+#             @is_hungry = "false"
+#     end
+# end
+# end
+
+# puff = Dragon.new("Puff", "Yarl", "Purple")
+# p puff
+# puff.eat(2)
+# p puff
 
 
 # # #  Write a Hobbit class
@@ -90,35 +90,31 @@ class Hobbit
         @name = name
         @disposition = disposition
         @age = 0
-        @is_adult
-            if @age > 33
-                @is_adult = "true"
-            else @age <= 33
-                @is_adult = "false"
-            end
+        @is_adult = false
+        @is_old = false
+        @has_ring = false
 
-        @is_old
-            if @age > 101
-                @is_old = "true"
-            else @age <= 101
-                @is_old = "false"
-            end
-
-        @has_ring
-            if @name == "Frodo"
-                @has_ring = "true"
-            else @name != "Frodo"
-                @has_ring = "false"
-            end
+        if @name == "Frodo"
+            @has_ring = true
+        end
     end
-
-        def celebrate_birthday(i)
-            @age = @age + i
+    
+    def celebrate_birthday
+        @age += 1
+            if @age >= 101
+                @is_old = true
+            elsif @age >=33 
+                @is_adult = true\
+        end
     end
 end
 
 
-hobbit = Hobbit.new("Frodo", "happy")
-p hobbit
-hobbit.celebrate_birthday(70)
-p hobbit
+hob1 = Hobbit.new("Frodo", "happy")
+p hob1
+100.times {hob1.celebrate_birthday}
+p hob1
+hob2 = Hobbit.new("Sam", "Elated")
+p hob2
+110.times {hob2.celebrate_birthday}
+p hob2
