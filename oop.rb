@@ -2,22 +2,22 @@
 # # # it should have a dynamic name attribute
 # # # it should have a color attribute, that is silver by default
 # # # # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
-# class Unicorn
-#     def initialize(name)
-#         @name = name
-#         @color = "Silver"
-#         @speak = "hello"
-#     end
+class Unicorn
+    def initialize(name)
+        @name = name
+        @color = "Silver"
+        @speak = "hello"
+    end
     
-#     def say(input)
-#         @speak = "*~*#{input}"
-#     end
-# end
+    def say(input)
+        @speak = "*~*#{input}"
+    end
+end
 
-# Land_Walrus = Unicorn.new("Ben")
-# p Land_Walrus
-# Land_Walrus.say("hi")
-# p Land_Walrus
+Land_Walrus = Unicorn.new("Ben")
+p Land_Walrus
+Land_Walrus.say("hi")
+p Land_Walrus
 
   
 
@@ -28,22 +28,22 @@
 # # #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
 # # #  it should have a thirsty attribute, that is true by default
 # # # #  it should have a drink method. When called, the thirsty attribute changes to false
-# class Vampire
-#     def initialize(name, pet = "bat")
-#         @name = name
-#         @pet = pet
-#         @thirsty = "true"
-#     end
+class Vampire
+    def initialize(name, pet = "bat")
+        @name = name
+        @pet = pet
+        @thirsty = true
+    end
     
-#     def drink()
-#         @thirsty = "false"
-#     end
-# end
+    def drink()
+        @thirsty = false
+    end
+end
 
-# dracula = Vampire.new("Kyle", "cow")
-# p dracula
-# dracula.drink
-# p dracula
+dracula = Vampire.new("Kyle", "cow")
+p dracula
+dracula.drink
+p dracula
 
 
 
@@ -55,25 +55,25 @@
 # # #  it should have a is_hungry attribute that is true by default
 # # #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
 
-# class Dragon
-#     def initialize(name, rider, color)
-#         @name = name
-#         @rider = rider
-#         @color = color
-#         @is_hungry = "true"
-#     end
+class Dragon
+    def initialize(name, rider, color)
+        @name = name
+        @rider = rider
+        @color = color
+        @is_hungry = true
+    end
 
-#     def eat(i)
-#         if i >= 4
-#             @is_hungry = "false"
-#     end
-# end
-# end
+    def eat(i)
+        if i >= 4
+            @is_hungry = false
+    end
+end
+end
 
-# puff = Dragon.new("Puff", "Yarl", "Purple")
-# p puff
-# puff.eat(2)
-# p puff
+puff = Dragon.new("Puff", "Yarl", "Purple")
+p puff
+puff.eat(2)
+p puff
 
 
 # # #  Write a Hobbit class
